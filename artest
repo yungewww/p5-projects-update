@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.1/dist/mindar-image-aframe.prod.js"></script>
+  </head>
+  <body>
+    <!--             add mindar-image to <a-scene>  -->
+    <a-scene
+      mindar-image="imageTargetSrc: https://cdn.glitch.global/34d0cdbf-317f-45f4-9f0d-ce872a2db3e0/targets.mind?v=1680049513532"
+      color-space="sRGB"
+      renderer="colorManagement: true, physicallyCorrectLights"
+      vr-mode-ui="enabled: false"
+      device-orientation-permission-ui="enabled: false"
+    >
+          <!--             add scene code here  -->
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+      <a-entity mindar-image-target="targetIndex: 0">
+<!--       <a-box position="0 0.5 0"></a-box> -->
+        <a-text value="Hello, World" position="-0.5 0 0"></a-text>
+<!--         <a-entity
+          position="0 0 0"
+          scale="0.05 0.05 0.05"
+					gltf-model="https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
+        ></a-entity> -->
+        <a-video src="https://cdn.glitch.me/34d0cdbf-317f-45f4-9f0d-ce872a2db3e0/00%20part%203.mp4?v=1680052229281"></a-video>
+        </a-entity>
+                
+    </a-scene>
+  </body>
+</html>
