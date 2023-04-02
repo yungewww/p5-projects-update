@@ -1,6 +1,7 @@
 let obj = [];
 let a;
 let myName;
+let hint;
 
 function setup() {
   createCanvas(400, 400);
@@ -9,10 +10,13 @@ function setup() {
   textSize(24);
   textAlign(CENTER, CENTER);
   
-  input = createInput('// w //');
+  input = createInput("// w //");
   input.position(20, 65);
   
-  button = createButton('Do Not Click');
+  hint = createElement("p", "Try your own emoji 😆");
+  hint.position(20, 75);
+  
+  button = createButton("Do Not Click");
   button.position(width/2, height/2);
   button.mousePressed(pressed);
 }
